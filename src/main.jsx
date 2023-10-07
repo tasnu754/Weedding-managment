@@ -8,6 +8,9 @@ import {
 import MainPage from './Pages/MainPage/MainPage';
 import Home from './Pages/Home';
 import ErrorComp from './Components/ErrorComp';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 
 const router = createBrowserRouter([

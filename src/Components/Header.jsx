@@ -1,6 +1,4 @@
-import AOS from "aos";
-import "aos/dist/aos.css"; 
-AOS.init();
+
 
 const Header = () => {
   return (
@@ -20,16 +18,28 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="absolute text-white top-1/3 space-y-6 left-1/4 text-center">
-            <h1 data-aos="fade-up" className="text-7xl font-bold ">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="50"
+            data-aos-once="false"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-out"
+            className="absolute text-white top-1/3 px-10 space-y-6 lg:left-1/4 text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold ">
               {" "}
               <span className="text-yellow-500">We Create</span> <br />
               You Celebrate
             </h1>
-            <p className="text-3xl font-medium ">
+            <p className="text-xl md:text-3xl font-medium ">
               Planning a Wedding proposal or an even in this busy city is not
               easy <br />
               and it takes skill and time to make it all look easy-going
+            </p>
+            <p className="text-xl font-bold text-orange-900">
+              {" "}
+              By professional Wedding Planner
             </p>
           </div>
         </div>
@@ -46,16 +56,25 @@ const Header = () => {
               ❯
             </a>
           </div>
-          <div className="absolute text-white top-1/3 space-y-6 left-1/4 text-center">
-            <h1 className="text-7xl font-bold ">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-once="false"
+            className="absolute text-white top-1/3 px-10  space-y-6 lg:left-1/4 text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold ">
               {" "}
               <span className="text-yellow-500">From set up </span> <br />
               To clean up
             </h1>
-            <p className="text-3xl font-medium ">
+            <p className="text-xl md:text-3xl font-medium ">
               Planning a Wedding proposal or an even in this busy city is not
               easy <br />
               and it takes skill and time to make it all look easy-going
+            </p>
+            <p className="text-xl font-bold text-orange-900">
+              {" "}
+              By professional Wedding Planner
             </p>
           </div>
         </div>
@@ -72,16 +91,25 @@ const Header = () => {
               ❯
             </a>
           </div>
-          <div className="absolute text-white top-1/3 space-y-6 left-1/4 text-center">
-            <h1 className="text-7xl font-bold ">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-once="false"
+            className="absolute text-white top-1/3 px-10  space-y-6 left-1/4 text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold ">
               {" "}
               <span className="text-yellow-500">Your Desire </span> <br />
               Our Responsibility
             </h1>
-            <p className="text-3xl font-medium ">
+            <p className="text-xl md:text-3xl font-medium ">
               Planning a Wedding proposal or an even in this busy city is not
               easy <br />
               and it takes skill and time to make it all look easy-going
+            </p>
+            <p className="text-xl font-bold text-orange-900">
+              {" "}
+              By professional Wedding Planner
             </p>
           </div>
         </div>
@@ -98,16 +126,25 @@ const Header = () => {
               ❯
             </a>
           </div>
-          <div className="absolute text-white top-1/3 space-y-6 left-1/4 text-center">
-            <h1 className="text-7xl font-bold ">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-once="false"
+            className="absolute text-white px-10  top-1/3 space-y-6 left-1/4 text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold ">
               {" "}
               <span className="text-yellow-500">HAPPY </span> <br />
               WEDDING
             </h1>
-            <p className="text-3xl font-medium ">
+            <p className="text-xl md:text-3xl font-medium ">
               Planning a Wedding proposal or an even in this busy city is not
               easy <br />
               and it takes skill and time to make it all look easy-going
+            </p>
+            <p className="text-xl font-bold text-orange-900">
+              {" "}
+              By professional Social Events Planner
             </p>
           </div>
         </div>

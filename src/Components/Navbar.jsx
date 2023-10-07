@@ -89,7 +89,7 @@ const Navbar = () => {
               alt=""
             />
             <a className="text-xl font-bold btn btn-ghost normal-case text-xl text-white">
-              Wedding Managment
+              Social Events
             </a>
           </div>
           <div className="navbar-center hidden lg:flex ">
@@ -97,7 +97,7 @@ const Navbar = () => {
               {item}
             </ul>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end ">
             <a className="btn btnSignin border-none">SignIn</a>
           </div>
         </div>
