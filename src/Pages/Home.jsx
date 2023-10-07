@@ -5,7 +5,7 @@ import HoverAnimation from "../Components/HoverAnimation";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <Header></Header>
             <HoverAnimation></HoverAnimation>
             <Agency></Agency>

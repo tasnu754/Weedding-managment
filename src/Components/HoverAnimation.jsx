@@ -1,4 +1,5 @@
-import { GiPartyFlags } from "react-icons/gi";
+import { GiPartyFlags, GiGlassCelebration, GiPartyHat } from "react-icons/gi";
+import { BiHappyBeaming } from "react-icons/bi";
 
 const HoverAnimation = () => {
   return (
@@ -9,7 +10,7 @@ const HoverAnimation = () => {
           <br /> and we have{" "}
           <span className="text-yellow-600">the Solution</span>
         </h2>
-        <p className="text-lg font-bold">Here is how we can help you</p>
+        <p className="text-2xl font-bold">Here is how we can help you</p>
       </div>
       <div className="flex min-h-screen items-center justify-center bg-neutral-900 ">
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
@@ -27,7 +28,7 @@ const HoverAnimation = () => {
                 <GiPartyFlags className="text-7xl text-yellow-200"></GiPartyFlags>
               </div>
               <h1 className="text-3xl font-bold text-[#D3959B]">Celebration</h1>
-              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#c471ed] mt-14">
+              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#b8a6c1] mt-14">
                 From a sweet 16 pary to a 50th birthday celebration…You can
                 enjoy and eat food. and can spend time with your loved ones.many
                 things can be considered special occasions.
@@ -45,10 +46,10 @@ const HoverAnimation = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div className="absolute inset-0  flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
               <div>
-                <GiPartyFlags className="text-7xl text-yellow-200"></GiPartyFlags>
+                <GiGlassCelebration className="text-7xl text-yellow-200"></GiGlassCelebration>
               </div>
               <h1 className="text-3xl font-bold text-[#D3959B]">Occasion</h1>
-              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#c471ed] mt-14">
+              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#a590af] mt-14">
                 Birthdays, Anniversaries, these include work anniversaries. Also
                 a death with a funeral can be a special occasion weddings.Day
                 Events. We have a variety
@@ -66,10 +67,10 @@ const HoverAnimation = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div className="absolute inset-0  flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
               <div>
-                <GiPartyFlags className="text-7xl text-yellow-200"></GiPartyFlags>
+                <GiPartyHat className="text-7xl text-yellow-200"></GiPartyHat>
               </div>
               <h1 className="text-3xl font-bold text-[#D3959B]">Party</h1>
-              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#c471ed] mt-14">
+              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#ab93b5] mt-14">
                 Make your parties feel more alive by having the right number of
                 guests. Research suggests the best group size is from five to
                 nine.Party with friends and family
@@ -87,10 +88,10 @@ const HoverAnimation = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div className="absolute inset-0  flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
               <div>
-                <GiPartyFlags className="text-7xl text-yellow-200"></GiPartyFlags>
+                <BiHappyBeaming className="text-7xl text-yellow-200"></BiHappyBeaming>
               </div>
               <h1 className="text-3xl font-bold text-[#D3959B]">Wedding</h1>
-              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#c471ed] mt-14">
+              <p className="text-lg italic text-whitemb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#bfa4cc] mt-14">
                 he system is designed to facilitate the arrangement and
                 organization of weddings. It provides a centralized platform to
                 manage various aspects of wedding planning

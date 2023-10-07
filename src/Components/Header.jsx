@@ -2,7 +2,7 @@
 
 const Header = () => {
   return (
-    <div>
+    <div className="h-[800px]">
       <div
         // data-aos="fade-up"
         // data-aos-delay="1000"
