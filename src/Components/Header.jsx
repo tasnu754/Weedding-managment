@@ -3,7 +3,13 @@
 const Header = () => {
   return (
     <div>
-      <div className="carousel w-full">
+      <div
+        // data-aos="fade-up"
+        // data-aos-delay="1000"
+        // data-aos-duration="1000"
+        // data-aos-offset="200"
+        className="carousel w-full"
+      >
         <div id="slide1" className="carousel-item relative w-full">
           <img
             src="https://i.ibb.co/y4LdQGb/shardayyy-photography-f-Jzm-Pe-a0e-U-unsplash.jpg"
@@ -20,11 +26,9 @@ const Header = () => {
 
           <div
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="50"
-            data-aos-once="false"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
             data-aos-offset="200"
-            data-aos-easing="ease-in-out"
             className="absolute text-white top-1/3 px-10 space-y-6 lg:left-1/4 text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold ">
@@ -58,8 +62,9 @@ const Header = () => {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="false"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-offset="200"
             className="absolute text-white top-1/3 px-10  space-y-6 lg:left-1/4 text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold ">
@@ -93,8 +98,9 @@ const Header = () => {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="false"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-offset="200"
             className="absolute text-white top-1/3 px-10  space-y-6 left-1/4 text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold ">
@@ -128,8 +134,9 @@ const Header = () => {
           </div>
           <div
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-once="false"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-offset="200"
             className="absolute text-white px-10  top-1/3 space-y-6 left-1/4 text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold ">
