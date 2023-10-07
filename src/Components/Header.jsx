@@ -10,7 +10,7 @@ const Header = () => {
         // data-aos-offset="200"
         className="carousel w-full"
       >
-        <div id="slide1" className="carousel-item relative w-full">
+        <div id="slide1" className="carousel-item relative w-full ">
           <img
             src="https://i.ibb.co/y4LdQGb/shardayyy-photography-f-Jzm-Pe-a0e-U-unsplash.jpg"
             className="w-full h-[800px]"
