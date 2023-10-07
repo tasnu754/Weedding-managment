@@ -8,15 +8,15 @@ const Agency = () => {
     <div>
       <div
         data-aos="zoom-in-down"
-        data-aos-delay="50"
+        data-aos-delay="500"
         data-aos-duration="1000"
         data-aos-offset="200"
-        className="py-14 space-y-16 bg-gradient-to-b from-[#6b6b83] to-[#3b8d99] text-white"
+        className=" py-24 space-y-16 bg-gradient-to-b from-[#6b6b83] to-[#3b8d99] text-white"
       >
         <div className="space-y-10 md:px-10 ">
           <h1 className="text-3xl lg:text-5xl font-bold text-center">
             {" "}
-            <span className="text-yellow-500">Hello!</span> We Are an Social
+            <span className="text-yellow-500">Hello!</span> We Are a Social
             Managment agency
           </h1>
           <p className="text-base lg:text-lg font-bold text-center w-[300px] md:w-[500px] lg:w-[800px] mx-auto text-gray-800">
