@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Raleway: "'Raleway', sans-serif", // Adds a new `font-Raleway` class
+      }
+    },
   },
     plugins: [require("daisyui")],
 }

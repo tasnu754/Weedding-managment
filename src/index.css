@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+.navBg{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+            
+                  
+         .btnSignin {
+            background-image: linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btnSignin:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
