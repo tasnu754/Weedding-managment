@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import AuthElement from './Pages/AuthElement';
 import Registration from './Pages/Registration';
 import Signin from './Pages/Signin';
+import About from './Pages/About';
 AOS.init();
 
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/signin",
         element: <Signin></Signin>
+      },
+      {
+        path: "/about",
+        element: <About></About>
       }
     
     ]
