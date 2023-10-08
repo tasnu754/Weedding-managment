@@ -5,6 +5,8 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import auth from "../../firebase.config";
 
@@ -14,6 +16,12 @@ export const authContext = createContext(null);
 const AuthElement = ({ children }) => {
     const [serviceData, setServiceData] = useState([]);
     const [user, setUser] = useState(null);
+
+    const GoogleProvider = new GoogleAuthProvider();
+
+    const googleLogin = () => {
+       return signInWithPopup(auth, GoogleProvider);
+    }
 
     useEffect(() => {
         fetch("./event.json")
@@ -54,6 +62,7 @@ const AuthElement = ({ children }) => {
       register,
       login,
       logOut,
+      googleLogin,
     };
   return (
     <div>
