@@ -7,9 +7,11 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
 import auth from "../../firebase.config";
 
+// https://i.ibb.co/K9W89d5/reinhart-julian-Wx-M465o-M4j4-unsplash-1.jpg
 
 export const authContext = createContext(null);
 
@@ -41,6 +43,13 @@ const AuthElement = ({ children }) => {
         return signOut(auth);
     }
 
+    const update = (name , img) => {
+      return  updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: img,
+        });
+    }
+
     useEffect(() => {
        const unSubscribe = onAuthStateChanged(auth, currentUser => {
             
@@ -59,6 +68,7 @@ const AuthElement = ({ children }) => {
       login,
       logOut,
       googleLogin,
+      update,
     };
   return (
     <div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import swal from "sweetalert";
 
 const Registration = () => {
-    const { register } = CustomContext();
+    const { register, update } = CustomContext();
     const [name, setName] = useState("");
     const [img, setImg] = useState("");
     const [email, setEmail] = useState("");
@@ -42,6 +42,13 @@ const Registration = () => {
         
             register(email, pass)
                 .then(() => {
+                    update(name, img)
+                        .then(() => {
+                            console.log("Uopdate");
+                        })
+                        .catch((error) => {
+                        console.log(error.message);
+                    })
                     swal("Registration Success!", "Stay with us", "success");
                     setName("");
                     setImg("");
