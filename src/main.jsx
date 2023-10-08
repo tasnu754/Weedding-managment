@@ -14,6 +14,8 @@ import AuthElement from './Pages/AuthElement';
 import Registration from './Pages/Registration';
 import Signin from './Pages/Signin';
 import About from './Pages/About';
+import Shop from './Pages/Shop';
+import Feedback from './Pages/Feedback';
 AOS.init();
 
 
@@ -39,8 +41,15 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>
+      },
+      {
+        path: "/shop",
+        element: <Shop></Shop>
+      },
+      {
+        path: "/feedback",
+        element: <Feedback></Feedback>
       }
-    
     ]
   },
 ]);
