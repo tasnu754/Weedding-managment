@@ -7,8 +7,12 @@ const Navbar = () => {
 
   const handleSignout = () => {
     logOut()
-      .then()
-      .catch()
+      .then(() => {
+        console.log("Logged out success");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      })
   }
   
   const item = (
@@ -109,7 +113,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end ">
           {user ? (
-            <button onClick={handleSignout} className="btn btnSignin border-none">Log out</button>
+            <button onClick={handleSignout} className="btn btnSignin border-none">Sign out</button>
           ) : (
             <Link to="/signin">
               <button className="btn btnSignin border-none">SignIn</button>

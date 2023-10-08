@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 const Signin = () => {
-    const { login } = CustomContext();
+    const { login, googleLogin } = CustomContext();
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [checked, setChecked] = useState(false);
@@ -32,6 +32,16 @@ const Signin = () => {
              
           });
            setChecked(false);
+    }
+
+    const handleGoogle = () => {
+        googleLogin()
+        .then((result) => {
+            console.log("Google" , result.user);
+        })
+        .catch((error)=>{
+            console.log(error.message);
+        })
     }
 
 
@@ -114,7 +124,7 @@ const Signin = () => {
               Sign In
             </button>
 
-            <button className="mt-4 block w-full select-none rounded-lg bg-gradient-to-tr from-[#085078] to-[#85D8CE] py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-white shadow-md shadow-[#85D8CE] transition-all hover:shadow-lg hover:shadow-[#085078] 40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+            <button onClick={handleGoogle} className="mt-4 block w-full select-none rounded-lg bg-gradient-to-tr from-[#085078] to-[#85D8CE] py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-white shadow-md shadow-[#85D8CE] transition-all hover:shadow-lg hover:shadow-[#085078] 40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
               <FaGoogle className="inline text-blue-800 text-xl mr-4"></FaGoogle>{" "}
               L<span className=" lowercase">ogin with </span>Google
             </button>

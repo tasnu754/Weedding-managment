@@ -27,7 +27,7 @@ const Registration = () => {
         register(email, pass)
           .then((result) => {
             const signUser = result.user;
-              console.log("Register Success",signUser);
+            //   console.log("Register Success",signUser);
               setName("");
               setImg("");
               setEmail("");
