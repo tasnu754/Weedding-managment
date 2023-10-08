@@ -11,6 +11,8 @@ import ErrorComp from './Components/ErrorComp';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import AuthElement from './Pages/AuthElement';
+import Registration from './Pages/Registration';
+import Signin from './Pages/Signin';
 AOS.init();
 
 
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('./public/event.json')
       },
+      {
+        path: "/register",
+        element: <Registration></Registration>
+      },
+      {
+        path: "/signin",
+        element: <Signin></Signin>
+      }
     
     ]
   },

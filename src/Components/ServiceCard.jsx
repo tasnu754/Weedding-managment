@@ -5,7 +5,12 @@ const ServiceCard = ({ data }) => {
     console.log(data);
     return (
       <div>
-        <div data-aos="fade-left" className="card card-side bg-base-100 shadow-xl md:h-[250px]">
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="card card-side bg-base-100 shadow-xl md:h-[250px]"
+        >
           <figure>
             <img
               className="h-[350px] lg:w-[400px]"
