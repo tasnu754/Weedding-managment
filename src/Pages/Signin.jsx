@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
+import CustomContext from "../Components/CustomContext";
+import { useState } from "react";
 
 
 const Signin = () => {
+    const { login } = CustomContext();
+    const [email, setEmail] = useState("");
+    const [pass, setPass] = useState("");
+    const [checked, setChecked] = useState(false);
+
+
+    const handleEmail = (e) => {
+      setEmail(e.target.value);
+    };
+    const handlePass = (e) => {
+      setPass(e.target.value);
+    };
+
+    const handleSignIn = () => {
+        login(email, pass)
+          .then((result) => {
+            const signUser = result.user;
+            console.log( "success",signUser);
+              setEmail("");
+              setPass("");
+              
+          })
+          .catch((error) => {
+              console.log(error.message);
+             
+          });
+           setChecked(false);
+    }
+
+
     return (
       <div className="min-h-screen flex justify-center items-center">
         <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -14,6 +46,9 @@ const Signin = () => {
           <div className="flex flex-col gap-4 p-6">
             <div className="relative h-11 w-full min-w-[200px]">
               <input
+                type="email"
+                value={email}
+                onChange={handleEmail}
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-[#085078] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
               />
@@ -23,6 +58,9 @@ const Signin = () => {
             </div>
             <div className="relative h-11 w-full min-w-[200px]">
               <input
+                type="password"
+                value={pass}
+                onChange={handlePass}
                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-[#085078] focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                 placeholder=" "
               />
@@ -38,6 +76,8 @@ const Signin = () => {
                 >
                   <input
                     type="checkbox"
+                    checked={checked}
+                    onChange={() => setChecked(!checked)}
                     className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#085078] checked:bg-[#085078] checked:before:bg-[#085078]hover:before:opacity-10"
                     id="checkbox"
                   />
@@ -66,6 +106,7 @@ const Signin = () => {
           </div>
           <div className="p-6 pt-0">
             <button
+              onClick={handleSignIn}
               className="block w-full select-none rounded-lg bg-gradient-to-tr from-[#085078] to-[#85D8CE] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-[#85D8CE] transition-all hover:shadow-lg hover:shadow-[#085078] 40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
               data-ripple-light="true"

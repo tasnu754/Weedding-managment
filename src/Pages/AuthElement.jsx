@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "firebase/auth";
 import auth from "../../firebase.config";
 
 
@@ -8,6 +13,7 @@ export const authContext = createContext(null);
 
 const AuthElement = ({ children }) => {
     const [serviceData, setServiceData] = useState([]);
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         fetch("./event.json")
@@ -19,9 +25,35 @@ const AuthElement = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    const login = (email , password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    const logOut = () => {
+        return signOut(auth);
+    }
+
+    useEffect(() => {
+       const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            if (currentUser) {
+                setUser(currentUser);
+                console.log("auth",currentUser);
+           }
+            else {
+                console.log("error");
+           }
+       });
+        return () => {
+            unSubscribe();
+        }
+    },[])
+
     const info = {
+      user,
       serviceData,
       register,
+      login,
+      logOut,
     };
   return (
     <div>
