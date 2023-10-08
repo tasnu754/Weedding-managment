@@ -34,7 +34,7 @@ const Registration = () => {
         if (!/[a-z]/.test(pass)) {
            return setError("Password should contain at least one lowercase letter");
         }
-        if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(pass)) {
+        if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(pass)) {
           return setError(
             "Password should contain at least one special character"
           );
@@ -117,9 +117,9 @@ const Registration = () => {
               Password
             </label>
           </div>
-          <div >
+      
                       {error && <p className=" text-sm text-red-500">{ error}</p>}
-          </div>
+         
           <div className="-ml-2.5">
             <div className="inline-flex items-center">
               <label

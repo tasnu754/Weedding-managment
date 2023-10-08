@@ -45,7 +45,7 @@ const AuthElement = ({ children }) => {
        const unSubscribe = onAuthStateChanged(auth, currentUser => {
             
                 setUser(currentUser);
-                // console.log("auth",currentUser);
+                console.log("auth",currentUser);
        });
         return () => {
             unSubscribe();

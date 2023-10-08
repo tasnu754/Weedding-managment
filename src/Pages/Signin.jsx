@@ -11,6 +11,8 @@ const Signin = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [checked, setChecked] = useState(false);
+    const [error1, setError1] = useState(null);
+
 
 
     const handleEmail = (e) => {
@@ -21,6 +23,7 @@ const Signin = () => {
     };
 
     const handleSignIn = () => {
+        setError1(null);
         login(email, pass)
           .then(() => {
               setEmail("");
@@ -29,19 +32,20 @@ const Signin = () => {
               
           })
           .catch((error) => {
-              console.log(error.message);
+              setError1(error.message);
              
           });
            setChecked(false);
     }
 
     const handleGoogle = () => {
+        setError1(null);
         googleLogin()
         .then((result) => {
             console.log("Google" , result.user);
         })
         .catch((error)=>{
-            console.log(error.message);
+            setError1(error.message);
         })
     }
 
@@ -79,6 +83,9 @@ const Signin = () => {
                 Password
               </label>
             </div>
+            
+              {error1 && <p className=" text-sm text-red-500">{error1}</p>}
+            
             <div className="-ml-2.5">
               <div className="inline-flex items-center">
                 <label
@@ -125,7 +132,10 @@ const Signin = () => {
               Sign In
             </button>
 
-            <button onClick={handleGoogle} className="mt-4 block w-full select-none rounded-lg bg-gradient-to-tr from-[#085078] to-[#85D8CE] py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-white shadow-md shadow-[#85D8CE] transition-all hover:shadow-lg hover:shadow-[#085078] 40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ">
+            <button
+              onClick={handleGoogle}
+              className="mt-4 block w-full select-none rounded-lg bg-gradient-to-tr from-[#085078] to-[#85D8CE] py-3 px-6 text-center align-middle font-sans text-base font-bold uppercase text-white shadow-md shadow-[#85D8CE] transition-all hover:shadow-lg hover:shadow-[#085078] 40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none "
+            >
               <FaGoogle className="inline text-blue-800 text-xl mr-4"></FaGoogle>{" "}
               L<span className=" lowercase">ogin with </span>Google
             </button>
