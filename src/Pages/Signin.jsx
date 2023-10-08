@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import CustomContext from "../Components/CustomContext";
 import { useState } from "react";
+import swal from "sweetalert";
+
 
 
 const Signin = () => {
@@ -20,11 +22,10 @@ const Signin = () => {
 
     const handleSignIn = () => {
         login(email, pass)
-          .then((result) => {
-            const signUser = result.user;
-            console.log( "success",signUser);
+          .then(() => {
               setEmail("");
               setPass("");
+              swal("Login Success!", "Stay with us", "success");
               
           })
           .catch((error) => {
