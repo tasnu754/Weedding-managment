@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate } from "react-router-dom";
 import CustomContext from "./CustomContext";
 
 const Navbar = () => {
@@ -9,6 +9,8 @@ const Navbar = () => {
     logOut()
       .then(() => {
         console.log("Logged out success");
+        <Navigate to="/"></Navigate>;
+   
       })
       .catch((error) => {
         console.log(error.message);
@@ -47,26 +49,30 @@ const Navbar = () => {
           Register
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/shop"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "btn btn-accent" : ""
-          }
-        >
-          Shop
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/feedback"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "btn btn-accent" : ""
-          }
-        >
-          Feedback
-        </NavLink>
-      </li>
+      {user && (
+        <div className="flex gap-4 items-center">
+          <li>
+            <NavLink
+              to="/shop"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "btn btn-accent" : ""
+              }
+            >
+              Shop
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/feedback"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "btn btn-accent" : ""
+              }
+            >
+              Feedback
+            </NavLink>
+          </li>
+        </div>
+      )}
     </>
   );
   return (

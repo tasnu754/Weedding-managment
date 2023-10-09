@@ -18,6 +18,7 @@ export const authContext = createContext(null);
 const AuthElement = ({ children }) => {
     const [serviceData, setServiceData] = useState([]);
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const GoogleProvider = new GoogleAuthProvider();
 
@@ -31,19 +32,23 @@ const AuthElement = ({ children }) => {
             .then(data => setServiceData(data));
     }, [])
 
-    const register = (email , password) => {
+    const register = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const login = (email , password) => {
+    const login = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
-    const update = (name , img) => {
+    const update = (name, img) => {
+          setLoading(true);
       return  updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: img,
@@ -53,8 +58,8 @@ const AuthElement = ({ children }) => {
     useEffect(() => {
        const unSubscribe = onAuthStateChanged(auth, currentUser => {
             
-                setUser(currentUser);
-                console.log("auth",currentUser);
+           setUser(currentUser);
+           setLoading(false);
        });
         return () => {
             unSubscribe();
@@ -69,6 +74,7 @@ const AuthElement = ({ children }) => {
       logOut,
       googleLogin,
       update,
+      loading,
     };
   return (
     <div>

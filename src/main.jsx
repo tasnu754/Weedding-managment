@@ -17,6 +17,8 @@ import About from './Pages/About';
 import Shop from './Pages/Shop';
 import Feedback from './Pages/Feedback';
 import ServicPage from './Pages/ServicPage';
+import PrivateRoute from './Pages/PrivateRoute';
+import PrivateServiceRoute from './Pages/PrivateServiceRoute';
 AOS.init();
 
 
@@ -45,15 +47,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: <Shop></Shop>,
+        element: (
+          <PrivateRoute>
+            <Shop></Shop>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/feedback",
-        element: <Feedback></Feedback>,
+        element: (
+          <PrivateRoute>
+            <Feedback></Feedback>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/servicepage/:id",
-        element: <ServicPage></ServicPage>,
+        element: (
+          <PrivateServiceRoute>
+            <ServicPage></ServicPage>
+          </PrivateServiceRoute>
+        ),
       },
     ],
   },

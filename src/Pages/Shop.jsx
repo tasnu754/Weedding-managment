@@ -4,6 +4,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import Footer from "../Components/Footer";
 
 const Shop = () => {
+  
   return (
     <div>
       <div className="md:flex justify-around py-10 px-6 space-y-6 text-xl bg-teal-500  ">
