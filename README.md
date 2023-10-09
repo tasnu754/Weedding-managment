@@ -1,5 +1,5 @@
-Code link : 
-Live link :
+Code link : https://github.com/programming-hero-web-course-4/b8a9-event-management-tasnu754
+Live link : https://social-event-management-97a71.web.app/
 
 
 
@@ -14,3 +14,4 @@ Live link :
 * When user looged in, the name and the profile picture is shown to the navbar. When they log out, they will dissapear. It will  also work when a user is registerd. And A sweet alert is appear when user register or log in.
 
 * I have used private route in my project for privacy, Whoever wants to see the details of an event or wnats to show the shop and feedback page, user must be login first otherwise it will not appear.  
+
