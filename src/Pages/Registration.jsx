@@ -31,8 +31,8 @@ const Registration = () => {
           return  setError("Password should be more than 6 charaters");
         }
 
-        if (!/[a-z]/.test(pass)) {
-           return setError("Password should contain at least one lowercase letter");
+        if (!/[A-Z]/.test(pass)) {
+           return setError("Password should contain at least one Capital letter");
         }
         if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(pass)) {
           return setError(
