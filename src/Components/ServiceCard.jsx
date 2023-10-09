@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 
 const ServiceCard = ({ data }) => {
@@ -26,9 +27,11 @@ const ServiceCard = ({ data }) => {
               Service Charge: {data.price}
             </p>
             <div className="card-actions justify-end">
-              <button className="btnSignin  text-white font-bold">
-                See Details
-              </button>
+              <Link to={`/servicepage/${data.id}`}>
+                <button className="btnSignin  text-white font-bold">
+                  See Details
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Raleway: "'Raleway', sans-serif", // Adds a new `font-Raleway` class
+        Raleway: "'Playfair Display', serif", // Adds a new `font-Raleway` class
       }
     },
   },

@@ -7,7 +7,7 @@ const About = () => {
           <div className="p-10 bg-gray-300">
             <h1 className="text-5xl font-bold">About Us</h1>
           </div>
-          <div className="p-6 md:p-10 text-xl ">
+          <div className="p-6 md:p-10 text-xl font-semibold">
             <p>
               Our full services, all-the-way subtleties, and administrations
               make our studio the ideal beginning for everything party style.

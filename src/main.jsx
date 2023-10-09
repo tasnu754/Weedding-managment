@@ -16,6 +16,7 @@ import Signin from './Pages/Signin';
 import About from './Pages/About';
 import Shop from './Pages/Shop';
 import Feedback from './Pages/Feedback';
+import ServicPage from './Pages/ServicPage';
 AOS.init();
 
 
@@ -28,29 +29,33 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('./public/event.json')
+        loader: () => fetch("./public/event.json"),
       },
       {
         path: "/register",
-        element: <Registration></Registration>
+        element: <Registration></Registration>,
       },
       {
         path: "/signin",
-        element: <Signin></Signin>
+        element: <Signin></Signin>,
       },
       {
         path: "/about",
-        element: <About></About>
+        element: <About></About>,
       },
       {
         path: "/shop",
-        element: <Shop></Shop>
+        element: <Shop></Shop>,
       },
       {
         path: "/feedback",
-        element: <Feedback></Feedback>
-      }
-    ]
+        element: <Feedback></Feedback>,
+      },
+      {
+        path: "/servicepage/:id",
+        element: <ServicPage></ServicPage>,
+      },
+    ],
   },
 ]);
 

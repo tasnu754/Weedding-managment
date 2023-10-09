@@ -41,13 +41,15 @@ const Registration = () => {
         }
         
             register(email, pass)
-                .then(() => {
+              .then(() => {
+                   location.reload();
                     update(name, img)
                         .then(() => {
                             console.log("Uopdate");
                         })
                         .catch((error) => {
                         console.log(error.message);
+                         
                     })
                     swal("Registration Success!", "Stay with us", "success");
                     setName("");
