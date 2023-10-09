@@ -3,12 +3,14 @@ Live link :
 
 
 
-** My project is about social events management. Here i added a navbar , Header , service section , agency section , card hover section and a footer.
+** Five features of my project **
 
-** IN navbar, there are five rountes where two is private. When user is logged in , the private route will appear.
+* My project is about social events management. Here i added a navbar , Header , service section , agency section , card hover section and a footer.
 
-** In my service section I create six events, each of the events will show there details when clicking on it. But only when user is logged in.
+* IN navbar, there are five rountes where two is private. When user is logged in , the private route will appear.
 
-** When user looged in, the name and the profile picture is shown to the navbar. When they log out, they will dissapear. It will  also work when a user is registerd. And A sweet alert is appear when user register or log in.
+* In my service section I create six events, each of the events will show there details when clicking on it. But only when user is logged in.
 
-** I have used private route in my project for privacy, Whoever wants to see the details of an event or wnats to show the shop and feedback page, user must be login first otherwise it will not appear.  
+* When user looged in, the name and the profile picture is shown to the navbar. When they log out, they will dissapear. It will  also work when a user is registerd. And A sweet alert is appear when user register or log in.
+
+* I have used private route in my project for privacy, Whoever wants to see the details of an event or wnats to show the shop and feedback page, user must be login first otherwise it will not appear.  
