@@ -1,5 +1,6 @@
 Code link : https://github.com/programming-hero-web-course-4/b8a9-event-management-tasnu754
-Live link : https://social-event-management-97a71.web.app/
+
+Live link : https://social-event-management-97a71.web.app
 
 
 
