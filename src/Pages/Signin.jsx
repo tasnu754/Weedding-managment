@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link,  useLocation, useNavigate, } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import CustomContext from "../Components/CustomContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import swal from "sweetalert";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,15 +10,20 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Signin = () => {
     const { login, googleLogin, detailsClicked } =
-      CustomContext();
+        CustomContext();
+    const location = useLocation();
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [checked, setChecked] = useState(false);
     const [error1, setError1] = useState(null);
+    const navigate = useNavigate();
+   
 
-    if (detailsClicked) {
-      toast("Please Signin first!");
-    }
+    useEffect(() => {
+      if (detailsClicked) {
+        toast("Please Signin first!");
+      }
+    }, []);
 
     const handleEmail = (e) => {
       setEmail(e.target.value);
@@ -34,6 +39,7 @@ const Signin = () => {
               setEmail("");
               setPass("");
               swal("Login Success!", "Stay with us", "success");
+              navigate(location?.state ? location.state : "/");
               
           })
           .catch((error) => {
@@ -47,7 +53,8 @@ const Signin = () => {
         setError1(null);
         googleLogin()
         .then((result) => {
-            console.log("Google" , result.user);
+            console.log("Google", result.user);
+            navigate(location?.state ? location.state : "/");
         })
         .catch((error)=>{
             setError1(error.message);
@@ -88,9 +95,9 @@ const Signin = () => {
                 Password
               </label>
             </div>
-            
-              {error1 && <p className=" text-sm text-red-500">{error1}</p>}
-            
+
+            {error1 && <p className=" text-sm text-red-500">{error1}</p>}
+
             <div className="-ml-2.5">
               <div className="inline-flex items-center">
                 <label
@@ -155,8 +162,8 @@ const Signin = () => {
               </Link>
             </p>
           </div>
-            </div>
-            <ToastContainer></ToastContainer>
+        </div>
+        <ToastContainer ></ToastContainer>
       </div>
     );
 };

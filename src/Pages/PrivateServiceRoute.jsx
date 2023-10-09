@@ -2,12 +2,13 @@
 import PropTypes from "prop-types";
 
 
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import CustomContext from "../Components/CustomContext";
 
 const PrivateServiceRoute = ({ children }) => {
-  const { user, loading } = CustomContext();
-
+    const { user, loading } = CustomContext();
+    const location = useLocation();
+    console.log(location);
   if(loading){
     return <span className="loading loading-spinner text-success"></span>
   }
@@ -16,7 +17,7 @@ const PrivateServiceRoute = ({ children }) => {
   }
   return (
     <div>
-      <Navigate to="/signin"></Navigate>
+      <Navigate state={location.pathname} to="/signin"></Navigate>
     </div>
   );
 };
