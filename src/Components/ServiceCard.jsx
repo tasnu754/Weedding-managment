@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+import CustomContext from "./CustomContext";
+
 
 const ServiceCard = ({ data }) => {
-    console.log(data);
+    const { setDetailsClicked } = CustomContext();
+    setDetailsClicked(false);
+    
+    
     return (
       <div>
         <div
@@ -28,13 +33,17 @@ const ServiceCard = ({ data }) => {
             </p>
             <div className="card-actions justify-end">
               <Link to={`/servicepage/${data.id}`}>
-                <button className="btnSignin  text-white font-bold">
+                <button
+                  onClick={() => setDetailsClicked(true)}
+                  className="btnSignin  text-white font-bold"
+                >
                   See Details
                 </button>
               </Link>
             </div>
           </div>
         </div>
+       
       </div>
     );
 };

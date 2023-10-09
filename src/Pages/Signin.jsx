@@ -3,17 +3,22 @@ import { FaGoogle } from "react-icons/fa";
 import CustomContext from "../Components/CustomContext";
 import { useState } from "react";
 import swal from "sweetalert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
 const Signin = () => {
-    const { login, googleLogin } = CustomContext();
+    const { login, googleLogin, detailsClicked } =
+      CustomContext();
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [checked, setChecked] = useState(false);
     const [error1, setError1] = useState(null);
 
-
+    if (detailsClicked) {
+      toast("Please Signin first!");
+    }
 
     const handleEmail = (e) => {
       setEmail(e.target.value);
@@ -150,7 +155,8 @@ const Signin = () => {
               </Link>
             </p>
           </div>
-        </div>
+            </div>
+            <ToastContainer></ToastContainer>
       </div>
     );
 };

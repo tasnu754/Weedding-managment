@@ -19,6 +19,7 @@ const AuthElement = ({ children }) => {
     const [serviceData, setServiceData] = useState([]);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [detailsClicked, setDetailsClicked] = useState(false);
 
     const GoogleProvider = new GoogleAuthProvider();
 
@@ -75,6 +76,8 @@ const AuthElement = ({ children }) => {
       googleLogin,
       update,
       loading,
+      setDetailsClicked,
+      detailsClicked,
     };
   return (
     <div>
